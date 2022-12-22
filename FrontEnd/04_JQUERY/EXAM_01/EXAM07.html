@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".btn").on("click", function(){
+                let ts = $(this);
+                if(ts.text() == "숨김"){
+                    //순간적으로 숨기는 기능.
+                    // $(".wrap").css("display", "none");
+
+                    //시간은 ms 단위로 정의.
+                    //두번째인자인 function은 callback함수인데.
+                    //callback함수란. 동작(slideup)을 처리하고 난뒤에 처리할 내용.
+                    $(".wrap").slideUp(1000, function(){
+                        $(".btn").text("노출");
+                    });
+                } else {
+                    $(".wrap").slideDown(2000, function(){
+                        $(".btn").text("숨김");
+                    });
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <p class="btnWrap">
+        <button class="btn">숨김</button>
+    </p>
+    <div class="wrap">
+        <p>내용 1</p>
+        <p>내용 2</p>
+    </div>
+</body>
+</html>
