@@ -8,8 +8,9 @@
 <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fhyungrack-Choi&count_bg=%2379C83D&title_bg=%23555555&icon=fluentd.svg&icon_color=%23E7E7E7&title=%EB%B0%A9%EB%AC%B8%EC%9E%90%EC%88%98&edge_flat=false"/></a>
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=hyungrack-Choi&layout=compact"><br><br>
 
-# JAVAFX 
-  -FX01 예제 내용
-  -FX02 예제 내용
+# JAVAFX
 
-  모바일과 같은 환경 비슷하다
+- FX01 예제 내용
+- FX02 예제 내용
+
+모바일과 같은 환경 비슷하다
