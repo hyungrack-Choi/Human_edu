@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd//mybatis-3-mapper.dtd">
+<mapper namespace="com.human.springboot.PostDAO">
+	<insert id="InsertPosting">
+	insert into posting values(seq_post_id.nextval
+	,#{param1}
+	,#{param2}
+	,#{param3}
+	,to_char(sysdate,'YYYYMMDDHHMISS')
+	,to_char(sysdate,'YYYYMMDDHHMISS'))
+	</insert>
+	<select id="listPosting" resultType="com.human.springboot.PostingDTO">
+		select post_id,title,content, writer, TO_DATE(created, 'YYYY-MM-DD HH24:MI:SS') created,TO_DATE(updated, 'YYYY-MM-DD HH24:MI:SS') updated from posting order by post_id desc
+	</select>
+	<select id="getPostview" resultType="com.human.springboot.viewDTO">
+		select post_id,title,content, writer, 
+			substr(created,1,4)||'-'|| substr(created,5,2)||'-'||substr(created,7,2)||' '||substr(created,9,2)||':'||substr(created,11,2)||':'||substr(created,13,2) created,
+			substr(updated,1,4)||'-'|| substr(updated,5,2)||'-'||substr(updated,7,2)||' '||substr(updated,9,2)||':'||substr(updated,11,2)||':'||substr(updated,13,2) updated 
+		from posting 
+		where post_id = #{param1}
+	</select>	
+	
+	<update id="updatePosting">
+		update posting set title=#{param2},content=#{param3},writer=#{param4},updated=to_char(sysdate,'YYYYMMDDHHMISS') where post_id=#{param1}		
+	</update>	
+	<delete id="deleteview">
+		delete from posting where post_id = #{param1}
+	</delete>
+</mapper>
