@@ -22,8 +22,7 @@
 - //boolean ==> %b
 - System.out.printf
 - ("제 이름은 %s이고, 제 닉네임은 %c 입니다. 그리고 제 나이는 %d세.오늘의 온도는"
-- - "%f도입니다. 당신은 학생입니다 = %b"
-- , name, nickName, age, temp, isStudent);
+- "%f도입니다. 당신은 학생입니다 = %b", name, nickName, age, temp, isStudent);
 - 3.1 human03 패키지 if 문 switch문
 - 4.1 human04 패키지 while문 사용법
 - 4.2 human04/humanEx02.java do while문 작성
