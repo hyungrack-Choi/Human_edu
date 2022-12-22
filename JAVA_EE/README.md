@@ -8,9 +8,9 @@
 <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fhyungrack-Choi&count_bg=%2379C83D&title_bg=%23555555&icon=fluentd.svg&icon_color=%23E7E7E7&title=%EB%B0%A9%EB%AC%B8%EC%9E%90%EC%88%98&edge_flat=false"/></a>
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=hyungrack-Choi&layout=compact"><br><br>
 
-<div align=left>자바 프로그래밍</div><br>
+<div align=left>#자바 프로그래밍</div><br>
 
-<div align=left>(CAFE)1. 자바으로 Cafe 프로그램 만들기 (객체 지향 프로그래밍)</div><br>
+<div align=left>-(CAFE)1. 자바으로 Cafe 프로그램 만들기 (객체 지향 프로그래밍)</div><br>
 <div align=left>&emsp;&emsp;&emsp;1-1. Cafe 소스 파일</div><br>
 <div align=left>&emsp;&emsp;&emsp;CafeMain 파일</div><br>
 <div align=left>&emsp;&emsp;&emsp;Menu 파일</div><br>
