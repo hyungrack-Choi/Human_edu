@@ -9,12 +9,11 @@
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=hyungrack-Choi&layout=compact"><br><br>
 
 
-# FrontEnd 강의 내용 
-  -Html
-  -CSS
-  -javascript
-  -Jquery
-  -ajax
-  -bootstrap
-  
-  강의 내용
+<div># FrontEnd 강의 내용 </div><br>
+  <div>-Html</div><br>
+  <div>-CSS</div><br>
+  <div>-javascript</div><br>
+  <div>-Jquery</div><br>
+  <div>-ajax</div><br>
+  <div>-bootstrap</div><br><br>
+  <div>강의 내용</div><br>
