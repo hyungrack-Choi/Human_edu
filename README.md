@@ -1,4 +1,3 @@
-
 <img src="https://capsule-render.vercel.app/api?type=wave&color=auto&height=300&section=header&text=휴먼교육센터%20자바파일&fontSize=60" />
 <img src="https://img.shields.io/badge/Java-F7DF1E?style=flat-square&logo=JavaScript&logoColor=white"/>
 <img src="https://img.shields.io/badge/Eclipse-2C2255?style=flat-square&logo=Eclipse&logoColor=white"/>
@@ -17,19 +16,19 @@
 ## 내용
 
 - JAVA - JAVA SE
-    -2022.10.04 ~ 2022.11.03
-    -사용툴 :Eclipse SE
-    -자바를 코딩하기 위한 기본 개념, 객체, 상속, 인터페이스, 예외 처리 등 실습
-    -객체(추상 클래스, 인터페이스)를 이용한 데이터 처리 실습
+  - 2022.10.04 ~ 2022.11.03
+  - 사용툴 :Eclipse SE
+  - 자바를 코딩하기 위한 기본 개념, 객체, 상속, 인터페이스, 예외 처리 등 실습
+  - 객체(추상 클래스, 인터페이스)를 이용한 데이터 처리 실습
 - HTML, JAVA Script/CSS, JQuery - FRont_End
 
-    -2022.11.04 ~ 2022.11.28
-    -사용툴 : Visual Studio Code
-    -HTML : a, input, Button, Select , Div 등의 태그 실습
-    -CSS : CSS 기본 개념 및 실습
-    -JAVA Script :이벤트를 이용한 태그 설정 변환 및 데이터 관리 실습
-    -Jquery: 이벤트를 이용한 데이터 관리 시스템 구축 실습
--Oracle
-    -2022.11.29 ~ 2022.12.06
-    
-    강의 파일 내용
+  - 2022.11.04 ~ 2022.11.28
+  - 사용툴 : Visual Studio Code
+  - HTML : a, input, Button, Select , Div 등의 태그 실습
+  - CSS : CSS 기본 개념 및 실습
+  - JAVA Script :이벤트를 이용한 태그 설정 변환 및 데이터 관리 실습
+  - Jquery: 이벤트를 이용한 데이터 관리 시스템 구축 실습
+
+- Oracle
+  - 2022.11.29 ~ 2022.12.06
+  강의 파일 내용
