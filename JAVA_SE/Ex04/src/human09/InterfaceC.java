@@ -1,0 +1,7 @@
+package human09;
+
+public interface InterfaceC extends InterfaceA, InterfaceB{
+	//인터페이스도 상속 받을수 있다.
+	//InterfaceC는 methodC()뿐만 아니라. methodA(), methodB()도 구현해야 한다.
+	public void methodC();
+}
