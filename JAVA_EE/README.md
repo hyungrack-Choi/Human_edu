@@ -21,7 +21,8 @@
 <div align=left>&emsp;&emsp;&emsp;3.1 Ajax으로 구현</div><br>
 <div align=left>&emsp;&emsp;&emsp;3.2 json으로 jsp에서 controller에 text으로 보내기</div><br>
 <div align=left>&emsp;&emsp;&emsp;3.3 controller에서 json으로 보내기</div><br>
-<div align=left>&emsp;&emsp;&emsp;3.4 controller에서 HttpservletRequest으로</div><br>파라미터값 받아서 DB에 <div align=left>가서 CRUD한 이후에 Model에 담아서 JSP에 보내기</div><br>
+<div align=left>&emsp;&emsp;&emsp;3.4 controller에서 HttpservletRequest으로</div><br>파라미터값 받아서 DB에</div><br> 
+<div align=left>가서 CRUD한 이후에 Model에 담아서 JSP에 보내기</div><br>
 <div align=left>&emsp;&emsp;&emsp;3.5 JSP에서 버튼하나로 입력 수정 하기 input hidden 타입에 값넣어서</div><br>
 <div align=left>controller에서 메소드 하나로 처리해서 redirct:/으로 보내기</div><br>
 <div align=left>&emsp;&emsp;&emsp;3.6 controller에서 ajax받을때는 @ResponeBody으로 받아야한다.</div><br>
