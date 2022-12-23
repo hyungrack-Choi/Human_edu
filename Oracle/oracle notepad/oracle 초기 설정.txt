@@ -1,0 +1,23 @@
+oracle
+cmd
+sqlplus
+system
+human123
+sql> 완료
+
+
+create tablespace myts datafile 'd:\temp\myts.dbf' size 100m autoextend on next 5m;
+--테이블스페이스가 생성되었습니다.
+create user ora_user identified by human123 default tablespace myts temporary tablespace temp;
+--사용자가 생성되었습니다.
+grant dba to ora_user;
+--권한이 부여 되었습니다.
+ctrl+c --종료
+
+오라클접속 sqlplus
+ora_user
+human123
+select user from dual;
+sid  orcl
+user ora_user
+password human123

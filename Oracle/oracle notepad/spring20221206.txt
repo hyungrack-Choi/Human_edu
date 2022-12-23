@@ -1,0 +1,32 @@
+build.gradle파일의 dependencies메소드안에 두줄넣기
+	implementation 'javax.servlet:jstl'
+	implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
+F5 리프레쉬  새로고침	
+
+src>main아래에 webapp>WEB-INF>views 폴더 3개 추가
+
+-src/main/resources 안에 appliation.properties 파일을 열어서 다음을 추가.
+
+server.port=8081
+#JSP설정
+spring.mvc.view.prefix=/WEB-INF/views
+spring.mvc.view.suffix=.jsp
+
+저장할때 save as UTF-8으로 저장
+
+controller 만들기
+
+1.project 명 위에서 오른쪽 마우스버튼 클릭 -> new > class 선택 class 작명 아무거나
+2.class 이름 위에 @controller 적는다.
+
+RequestMapping 만들기
+
+	@RequestMapping("/")// web browser에서 "/"를 입력하면
+	public String test1() {
+		return "test1";//web browser에게 "test1.jsp"를 보내준다.
+	}
+1.controller class안에 @RequestMapping(URL)을 놓는다.
+2. 그 아래에 public String 메소드명을 놓는다.
+3.메소드안에 프론트엔드에 표시될 jsp 파일명을 return 한다.
+
+	return "JSP파일명";

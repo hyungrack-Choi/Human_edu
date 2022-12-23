@@ -1,0 +1,186 @@
+기본키 PK (Primary Key)
+1.테이블하나당 오직 하나만 존재한다. 두개이상 불가.
+기본키없는 테이블은 가능
+2.키값은 전체 컬럼을 통틀어서 유일해야(uniqueness)
+3.키값으 null을 넣을수 없다.(not null)
+
+ORM 웹프래임워크 장고 에서 db에서 pK가 자동으로 만들어줌
+
+객실종류번호(pk)
+객실종류
+
+객실번호(pk)
+객실명
+객실종류(버호)
+숙박 가능인원
+1박요금
+
+딴 table의 pk가 데이터 가있을땐 외래키 (foreign key)
+
+create table person(
+name varchar2(20),
+gender varchar2(6),
+mobile varchar2(8),
+address varchar2(30),
+city varchar2(20)
+);
+
+
+create table roomtype(
+typenum number(3) primary key,
+typename varchar2(20) not null,
+comments varchar2(32)
+);
+
+desc roomtype;
+create table roominfo(
+num varchar2(10) primary key,
+name varchar2(20) not null,
+type number(3) ,
+howmany number(3) default 1,
+howmuch number(4) default 0,
+constraint fk_typenum foreign key(type) references roomtype(typenum)
+//fk 설정
+);
+insert into roomtype values(1, 'suite Room', null);
+insert into roomtype values(2, 'Deluxe Room', null);
+insert into roomtype values(3, 'Family Room', null);
+select * from roomtype;
+insert into roominfo values(100, '백두산', 1,6,1200);
+select * from roominfo;
+insert into roominfo values(100, '한라산', 4, 6, 1200);
+
+on delete cascake //fk 부모와 자식 데이터 삭제
+
+데이터베이스 객체
+테이블(table) -실물 데이터가 저장되는 공간
+뷰(view) -테이블 검색용
+인덱스(index) -검색속도 향상
+시노님(Synonym) - 테이블의 별명
+시퀀스(Sequence) - 일련번호 생성기(pk제조용) 1,2,3,4,.... F12AK, F137OL
+
+함수(function) - 반환값이 있는 코드
+프로시저(procedure) - 반환값이 없는 코드
+패키지(package) - 함수/프로시저를 분류해서 모은 묶음
+
+number(4,2)
+number(소수저뫂함 전체길이,소수점이하 길이)
+23.157 number(6,3)
+1245.390 number(8,3)
+
+이미지 같은경우 
+db에 파일 명 과 위치를 넣고
+이미지 서버에 이미지파일을넣고
+조합해서 불러온다.
+
+delte from <- data only 복구가능(rollback)
+
+truncate table <- data only 복구불가능
+
+drop table  <- data + schema 복구 불가능
+
+//검색조건이 여러번일때
+create view under_file as select * from worker where salary < 5000;
+
+select * from under_file;
+
+create view under_file as select * from worker where salary < 5000;
+
+select * from under_file;
+
+create index ndx_emp_name on worker(emp_name);
+
+select * from employees;
+
+create table worker as select * from employees;
+create synonym human_resource for employees;
+select * from human_resource;
+
+create sequence seq_id;
+select seq_id.nextval from dual;//값 1식 증가
+
+select seq_id.currval from dual; //현재 시퀀스 값 출력
+
+index 의 장점 : select 속도 향상
+index 의 단점 : insert / update / delete 속도 저하
+
+산술연산자: +, -, *, /, ||
+비교연산자: >, <, >=, <=, =, <>, !, ^=, is null,is not null
+논리연산자:  and, or, not, any, some, all 
+교집합( 합집합(union, union all) 차집합(minus)
+
+select employee_id, salary
+from worker
+where salary between 4000 and 7000
+order by salary;
+
+% 한개 이상의 문자
+_ 한개의 문자
+
+LIKE 'a%'
+
+select emp_name from worker where emp_name like '%ac%';
+select emp_name from worker where emp_name like 'J_____%';
+select emp_name from worker where emp_name like '%ing%';
+
+select ceil(3.14) from dual;
+
+select floor(3.14) from dual;
+
+select power(4,4) from dual; 
+select sqrt(16) from dual;
+
+select initcap('good morning vietnam') from dual;
+select emp_name from worker;
+select lower(emp_name) from worker;
+select upper(emp_name) from worker;
+
+select concat(concat(emp_name, ','), salary) from worker;
+
+substr('Good Morning',5) => 'Morning'
+substr('Good Morning',1,4) => 'Good'
+
+select substr(emp_name,1,4) from worker;
+select emp_name from worker;
+select '['||emp_name||']' as 배열 from worker;
+select emp_name from worker where substr(emp_name, -3)='son';
+select emp_name from worker where emp_name like '%son';
+
+js 에선 문자열 '' "" 가능
+자바에선 "" 가능
+oracle에선 '' 가능
+
+
+select ltrim('abcdefgabc', 'abc') from dual;
+select rtrim('abcdefgabc', 'abc') from dual;
+select replace('Good Morning Vietnam', 'Morning', 'Evening') from dual;
+select replace(emp_name, 'John', 'John-') from worker where emp_name like 'John%';
+
+
+select emp_name, length(emp_name) from worker;
+
+select emp_name from worker;
+--이름 성
+--
+select instr(emp_name, ' ') as a from worker;
+select substr(emp_name, 1, instr(emp_name, ' ')-1) as a from worker order by employee_id;
+select emp_name from worker;
+
+select substr(emp_name,  instr(emp_name, ' ')+1) as a from worker;
+select replace(emp_name, ' ', '-') from worker;
+
+
+select to_char(salary, '99,999') as salay from worker;
+select sysdate, systimestamp from dual;
+select to_char(sysdate, 'yyyy-mm-dd') from dual;
+select to_char(systimestamp, 'yyyy-mm-dd HH24:Mi:SS') from dual;
+
+select to_char(sysdate, 'PM HH')||'시'||to_char(sysdate, 'MI')||'분'||to_char(sysdate, 'ss')||'초' from dual;
+
+select employee_id
+    , to_char(start_date, 'yyyy')
+    , to_char(end_date, 'yyyy')
+    , nullif(to_char(start_date, 'yyyy'), to_char(end_date, 'yyyy')) nullif_year
+from job_history;
+
+select emp_name, salary, decode(salary,3000,'3k',4000,'4k',5000,'5k','etc') from worker;

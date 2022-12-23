@@ -1,0 +1,126 @@
+create table 
+table 구조 스키마(schema)
+
+constraint
+규약
+
+문자열 타입 varchar
+숫자열 타입 number
+
+salary 는 number
+모바일번호는 문자열(010이 들어가기때문에 )
+
+create table person(
+name varchar2(20),
+mobile varchar2(8),
+gender varchar(6),
+salary number(5) -- -9999~9999
+);
+컬럼명	  //  데이터 타입
+
+
+desc person;
+테이블구조를 알려면 desc
+
+varchar (공백을 안준다 mail 하면 4자리만 줌)
+
+자리수가 틀리면 효율이 안좋음
+
+똑같은 자리로 저장하는게 varchar2
+가변길이 varchar2
+
+초기값을넣을려면 not null 으로 설정
+
+create table student(
+name varchar2(20) not null,
+gender varchar(6)  not null,
+school_name varchar(20)  not null,
+grade_num NUMBER(1) not null,
+mobile varchar2(8),
+match_score number(3),
+english_score number(3),
+korea_score number(3)
+);
+desc student;
+--C(데이터생성/추가)   insert
+--R(데이터조회)          select
+--U(데이터수정)          update
+--D(데이터삭제)          delete
+insert into student values('John', 'male', 'WestLake',6,null,null,null,null);
+
+-- '' == null
+
+insert into student(name,gender,school_name,grade_num) values('윤석봉', '남성', '세종대', '8');
+--숫자 타입의 컬럼에 ' ' 숫자 넣으면 '8' 숫자로인식해서 들어간다.
+
+Relational DB
+My-sql
+oracle
+maria DB
+sql server
+
+계층형
+
+ mongGo DB(키: 값 으로 컬럼으로 저장)
+ 
+ 배민db는 메인 메모리에 저장 메모리 (main memory db)
+ 게임도 캐쉬템 과 액션 모양 보ㅇ줄땐 (main memory db)
+ 
+ commit;
+ rollback;
+ 
+ delete from 테이블명 where 컬럼명=값 
+--행단위 삭제
+--특정컬럼의 값이 특정값인 레코드(row,line)를 지운다.
+
+update 테이블명 set 컬럼명1='값1', 컬럼명2='값2',....,컬럼명n=값n
+where 컬럼명=값
+
+데이터가 null인값을 삭제할려면 is null;
+데이터가 null인 이 아닌경우엔 is not null;
+
+# like : 문자를 포함
+'%d' - d로 끝나는
+'a%' - a로 시작하는
+'%test% - test가 포함되어있는
+'_a%' - 두번째 글자가 a로 시작하고 나머지는 무시
+'__a%' - 세번째 글자가 a로 시작하고 나머지는 무시
+
+# distinct
+distinct : 중복제거
+* : 모든
+조건절 : and, or, like, in, between and, is null, is not null
+
+ex4) 연결연산자( || ) : 컬럼을 연결해서 출력
+
+frist_name과 last_name을 연결해서 출력하시오
+
+select first_name||' '||last_name as "이 름" from employees;
+
+
+dmp 파일 임포트 명령어
+imp ora_user/human123 file=expcust.dmp log=expcust.log ignore=y grants=y rows=y indexes=y full=y
+
+
+imp ora_user/human123 file=expall.dmp log=expall.log ignore=y grants=y rows=y indexes=y full=y
+
+select count(*) from sales;
+918843
+
+select count(*) from employees;
+107
+
+
+create table worker as select * from employees; //worker 테이블에 employees정보 넣기
+
+select * from worker where manager_id = 124;//manager_id 가 124인 값을 찾기
+--
+
+select salary from worker where manager_id is null ;
+
+
+--worker 테이블에서 manager_id 가 null인 사람의 월급(salary)을 30000 으로 변경(update)
+update worker  set salary = 30000 where manager_id is null;
+
+--manager_id가 124인 사람의 커미션퍼센티이지를 0.25로 변경
+update worker set commission_pct = 0.25 where manager_id = 124;
