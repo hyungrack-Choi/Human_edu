@@ -8,10 +8,8 @@
 <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fhyungrack-Choi&count_bg=%2379C83D&title_bg=%23555555&icon=fluentd.svg&icon_color=%23E7E7E7&title=%EB%B0%A9%EB%AC%B8%EC%9E%90%EC%88%98&edge_flat=false"/></a>
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=hyungrack-Choi&layout=compact"><br><br>
 
-# 휴먼교육센터 교육과정
+# R 교육과정
 - 훈련기간 : 2022.12.19 ~ 2022.12.23
-
-# 한 파일의 크기가 50mb가 넘는건 일단 넣지 않는다.
 
 # R
 - 강의 주제 : R 기초 문법, 데이터 가공, 데이터 시각화, 텍스트 마이닝, 지도 시각화
